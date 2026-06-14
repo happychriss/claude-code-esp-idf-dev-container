@@ -29,6 +29,7 @@ RUN apt-get update \
     ipset \
     iproute2 \
     dnsutils \
+    iputils-ping \
     aggregate \
     jq \
     nano \

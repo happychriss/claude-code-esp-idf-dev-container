@@ -19,12 +19,12 @@ services:
       - ssh-home:/home/ubuntu/.ssh
       # Optional (broad): - /dev:/dev
 
-    devices:
-      - source: "${SERIAL_DEVICE:-/dev/ttyACM0}"
-        target: "/dev/ttyESP"
+    # devices:
+    #   - source: "${SERIAL_DEVICE:-/dev/ttyACM0}"
+    #     target: "/dev/ttyESP"
 
-    group_add:
-      - dialout
+    # group_add:
+    #   - dialout
 
     privileged: true
     init: true

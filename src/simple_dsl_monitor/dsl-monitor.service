@@ -1,0 +1,16 @@
+[Unit]
+Description=DSL monitor (run.py: fritz bridge + probe + web)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/development/Projects/Experiements/dsl_monitor
+# run.py startet fritz_status_service.py, probe.py und web.py
+ExecStart=/home/development/Projects/Experiements/dsl_monitor/.venv/bin/python3 /home/development/Projects/Experiements/dsl_monitor/run.py
+
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
